@@ -5,14 +5,14 @@ import time
 # Set the text color to white and the background to red
 os.system("color 4F")
 
-# Display "Credit to Viper"
+
 print("Credit to Viper")
 print("Note: Make sure to restart your Roblox after doing this.")
 
-# Wait for 3 seconds
+
 time.sleep(2)
 
-# Clear the screen
+
 os.system("cls")
 
 # Define the path to the Roblox version folder
@@ -32,13 +32,13 @@ client_settings_folder = os.path.join(version_path, "ClientSettings")
 if not os.path.exists(client_settings_folder):
     os.mkdir(client_settings_folder)
 
-# Ask the user for the desired FPS cap
+
 fps_cap = input("Enter the desired FPS cap: ")
 if int(fps_cap) > 900:
     print("Error: 900 is the max. Going over the limit may cause crashing.")
     exit()
 
-# Ask the user for the desired value of DFIntS2PhysicsSenderRate
+
 physics_rate = input("Enter the desired cap for your rendering: ")
 if int(physics_rate) > 900:
     print("Error: 900 is the max. Going over the limit may cause issues.")
@@ -96,11 +96,11 @@ client_settings = {
 with open(settings_path, "w") as settings_file:
     json.dump(client_settings, settings_file, indent=4)
 
-# Create the secretsettings.txt file with the desired line
+
 with open(os.path.join(version_path, "secretsettings.txt"), "w") as secret_file:
     secret_file.write("PhysicsRate=540")
 
-# Display a loading animation
+
 loading = "Loading "
 hashes = "####################"
 for i in range(1, 21):
